@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Config
+clusters:
+- name: "coding"
+  cluster:
+    server: "https://oa-rancher.devcoding.cn:8080/k8s/clusters/c-br6qn"
+- name: "coding-wangjiajun-node"
+  cluster:
+    server: "https://9.134.69.218:6443"
+    certificate-authority-data: "LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN3akNDQ\
+      WFxZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFTTVJBd0RnWURWUVFERXdkcmRXSmwKT\
+      FdOaE1CNFhEVEl3TURNeU56RTFORE16TTFvWERUTXdNRE15TlRFMU5ETXpNMW93RWpFUU1BNEdBM\
+      0VCQUsrL2xrTVFIOXNOCnhMbmJsZ0lGRDk4NU1Ba09xWDVITS9kbTlCQWxRVVZqWW1NL0dFNHNRe\
+      m9maUVXb0JuelBFamN5dC9Zemo2eEsKZXJ5eHcxYW1mMUxtV25lWHQwc3N2N2crVGxySUpyUXFWS\
+      ThRUzJ1OWF1bXlKRjJhemttdkFFZlJEZCtIQ25vagpwRVlEWG8rWVBWSml2V2lhY1dzL01Kb0U0L\
+      2ZmS0RPZ1ZEUzM5TkhSR0hxMGtKQjZsa0lzNjNYN0dsUjluRjNWClF4Tkh4RVU1ZW51amNSb0lUR\
+      GNCcVlNeVoyOURHRjVTNkpmU1ZaOGR2OTQ4Z0dmVGREd01qbERjOHhZVVBvT3gKbHF2bHJYdExke\
+      U4zVEZ5eldSWHFOSzJRZ1lEYWhaYUErcC91em50WHBLNWZSTy9hWFhqNTZFcUZ3blBlOWNrNApaQ\
+      VpzRm5qR2k0OENBd0VBQWFNak1DRXdEZ1lEVlIwUEFRSC9CQVFEQWdLa01BOEdBMVVkRXdFQi93U\
+      UZNQU1CCkFmOHdEUVlKS29aSWh2Y05BUUVMQlFBRGdnRUJBSXJUYkhab2E3OVZmQldMUXI3TzVMb\
+      XUxbERrZ3BDMHFUUTgKMjAvRjZwTHFWS0kzZGt1ZjhaeldwNGc3RUo5ZDVmVHZDR2hhZUwwdnpNa\
+      mU2L1B6TllqQlZlL1lYejZPRERJOApjd28wVk1BOFJ0dmFZNEVCQXVhVlFoN01KWjhvL0FPdVVxT\
+      nJRYVpqV2pidmNtZVliSlZUZFdJdWRBTDFUK0NoCjRqTnJ2UVkxR2tqeXRXWmRndE93MUpHWVAzU\
+      zh5WVp1UTBHM21yNy9Ja3MzNlRlNXp1bG1EaHU0OGNuaFFMSmQKTXNZTHE1QkxwY3N2am05bDYzT\
+      nExNjJlUStQQWpqUmt3dGpnN0xaSUxDajZvelVvSURMbGdDUHh3SXN6Yzc1MQo5YVY4aW0zRjlUd\
+      UQydlNMYkwrUHJIVW4yVG16OUE5U1pDc2ZNNG1DSllVZGdFQXlJK3M9Ci0tLS0tRU5EIENFUlRJR\
+      klDQVRFLS0tLS0K"
+
+users:
+- name: "coding"
+  user:
+    token: "kubeconfig-user-cjkb9.c-br6qn:fp2d8xxsrbrk8m7ttpdtzpp9scd472ktrdp6knvsk9kjkfd8g76xh4"
+
+contexts:
+- name: "coding"
+  context:
+    user: "coding"
+    cluster: "coding"
+- name: "coding-wangjiajun-node"
+  context:
+    user: "coding"
+    cluster: "coding-wangjiajun-node"
+
+current-context: "coding"
+
