@@ -12,25 +12,8 @@ fi
 
 cp ./config ~/.kube/config
 
-namespaces=(
-"coding-base"
-"tool"
-"coding-api-docs-dev"
-"coding-dev"
-"coding-testing-dev"
-"files-dev"
-"search"
-"wiki-dev"
-"cci-test"
-"coding-api-docs-test"
-"coding-home-page"
-"coding-operation"
-"coding-test"
-"coding-testing-test"
-"files-test"
-"micro-frontend-test"
-"wiki-test"
-)
+
+namespaces=$(kubectl get namespaces | grep -v "NAME" | grep -v "cattle" | grep -v "ingress" | grep -v "kube" | awk '{print $1}')
 
 for name in ${namespaces[@]}
 do
